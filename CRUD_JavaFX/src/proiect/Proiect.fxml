@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proiect.ProiectController">
+	<children>
+		<TabPane prefHeight="550.0" prefWidth="955.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab fx:id="tab_Artisti" text="Artisti">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="410.0" prefWidth="461.0">
+							<children>
+								<TableView fx:id="tabela_Artisti" layoutX="17.0" layoutY="62.0" prefHeight="444.0" prefWidth="919.0">
+									<columns>
+										<TableColumn fx:id="atribut_idArtist" prefWidth="100.66665649414062" text="idArtist" />
+										<TableColumn fx:id="atribut_NumeA" prefWidth="172.0" text="Nume" />
+										<TableColumn fx:id="atribut_PrenumeA" prefWidth="183.33331298828125" text="Prenume" />
+                              			<TableColumn fx:id="atribut_InstrumentA" prefWidth="205.33331298828125" text="Instrument" />
+                              			<TableColumn fx:id="atribut_NumeImpresarA" prefWidth="260.0" text="NumeImpresar" />
+									</columns>
+								</TableView>
+								<Button fx:id="buton_IncarcareArtisti" layoutX="659.0" layoutY="24.0" mnemonicParsing="false" onAction="#incarcaArtisti" text="Incarcare artisti" />
+								<Label layoutX="33.0" layoutY="28.0" text="Datele din tabela artisti" />
+                        <Button layoutX="534.0" layoutY="24.0" mnemonicParsing="false" onAction="#startAdaugaArtist" prefHeight="26.0" prefWidth="114.0" text="Adauga artist" />
+                        <Button layoutX="401.0" layoutY="24.0" mnemonicParsing="false" onAction="#stergeArtist" prefHeight="26.0" prefWidth="114.0" text="Sterge artist" />
+                        <Button layoutX="265.0" layoutY="24.0" mnemonicParsing="false" onAction="#startModificaArtist" prefHeight="26.0" prefWidth="114.0" text="Modifica artist" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tab_Concerte" text="Concerte">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="354.0">
+							<children>
+								<Button fx:id="buton_IncarcareConcerte" layoutX="652.0" layoutY="27.0" mnemonicParsing="false" onAction="#incarcaConcerte" text="Incarcare Concerte" />
+								<Label layoutX="45.0" layoutY="31.0" text="Datele din tabela concerte" />
+								<TableView fx:id="tabela_Concerte" layoutX="16.0" layoutY="64.0" prefHeight="432.0" prefWidth="917.0">
+									<columns>
+										<TableColumn fx:id="atribut_idConcert" prefWidth="95.33331298828125" text="idConcert" />
+										<TableColumn fx:id="atribut_DenumireC" prefWidth="248.66671752929688" text="Denumire" />
+										<TableColumn fx:id="atribut_LocatieC" prefWidth="319.333251953125" text="Locatie" />
+										<TableColumn fx:id="atribut_GenMuzicalC" minWidth="0.0" prefWidth="253.3333740234375" text="GenMuzical" />
+									</columns>
+								</TableView>
+                        <Button layoutX="521.0" layoutY="27.0" mnemonicParsing="false" onAction="#startAdaugaConcert" prefHeight="23.0" prefWidth="117.0" text="Adauga concert" />
+                        <Button layoutX="390.0" layoutY="27.0" mnemonicParsing="false" onAction="#stergeConcert" prefHeight="21.0" prefWidth="118.0" text="Sterge concert" />
+                        <Button layoutX="260.0" layoutY="27.0" mnemonicParsing="false" onAction="#startModificaConcert" prefHeight="22.0" prefWidth="111.0" text="Modifica concert" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tab_Repartizari" text="Repartizari">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buton_IncarcareRepartizari" layoutX="643.0" layoutY="21.0" mnemonicParsing="false" onAction="#incarcaRepartizari" text="Incarcare Repartizari" />
+                        <Label layoutX="33.0" layoutY="27.0" text="Datele din tabela repartizari" />
+                        <TableView fx:id="tabela_Repartizari" layoutX="20.0" layoutY="62.0" prefHeight="440.0" prefWidth="922.0">
+                           <columns>
+                              <TableColumn fx:id="atribut_idRepartizare" prefWidth="67.33331298828125" text="idRepartizare" />
+                              <TableColumn fx:id="atribut_idArtistR" prefWidth="53.333343505859375" text="idArtist" />
+                              <TableColumn fx:id="atribut_idConcertR" minWidth="0.0" prefWidth="61.33331298828125" text="idConcert" />
+                              <TableColumn fx:id="atribut_NumeR" prefWidth="77.33331298828125" text="Nume" />
+                              <TableColumn fx:id="atribut_PrenumeR" prefWidth="72.0" text="Prenume" />
+                              <TableColumn fx:id="atribut_InstrumentR" prefWidth="82.0" text="Instrument" />
+                              <TableColumn fx:id="atribut_NumeImpresarR" prefWidth="137.3333740234375" text="NumeImpresar" />
+                              <TableColumn fx:id="atribut_DenumireR" prefWidth="107.33331298828125" text="Denumire" />
+                              <TableColumn fx:id="atribut_LocatieR" prefWidth="114.0" text="Locatie" />
+                              <TableColumn fx:id="atribut_GenMuzicalR" minWidth="0.0" prefWidth="154.666748046875" text="GenMuzical" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="509.0" layoutY="21.0" mnemonicParsing="false" onAction="#startAdaugaRepartizare" prefHeight="21.0" prefWidth="123.0" text="Adauga repartizare" />
+                        <Button layoutX="373.0" layoutY="21.0" mnemonicParsing="false" onAction="#stergeRepartizare" prefHeight="21.0" prefWidth="123.0" text="Sterge repartizare" />
+                        <Button layoutX="236.0" layoutY="21.0" mnemonicParsing="false" onAction="#startModificaRepartizare" prefHeight="25.0" prefWidth="123.0" text="Modifica repartizare" />
+                     </children></AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>
