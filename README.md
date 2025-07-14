@@ -1,4 +1,4 @@
-# Weather app with BLE and ESP32 integration
+# JavaFX CRUD Application for Database Management
 ## Description
 This desktop application is developed using JavaFX for a modern and user-friendly interface and SQL for reliable data storage. It provides full 
 Create, Read, Update and Delete (CRUD) functionality, enabling users to manage database records efficiently. The application ensures secure and 
